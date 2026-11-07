@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+node_modules/
+state/
+*.log
+*.tgz
+.DS_Store
+

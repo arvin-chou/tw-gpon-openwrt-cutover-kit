@@ -1,0 +1,26 @@
+{
+  "name": "tw-gpon-openwrt-cutover-kit",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Fail-closed CHT GPON stick cutover verifier for Xiaomi BE10000/QWRT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvin-chou/tw-gpon-openwrt-cutover-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arvin-chou/tw-gpon-openwrt-cutover-kit/security/advisories/new"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=25"
+  },
+  "scripts": {
+    "audit:release": "node scripts/release-audit.mjs",
+    "cutover": "node bin/gpon-cutover.mjs cutover --apply",
+    "help": "node bin/gpon-cutover.mjs --help",
+    "install:local": "node bin/install.mjs",
+    "preflight": "node bin/gpon-cutover.mjs preflight",
+    "test": "node --test tests/*.mjs && npm run audit:release"
+  }
+}
